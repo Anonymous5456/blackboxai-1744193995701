@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Who's Watching?</title>
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .profile-bg {
+            background: #141414;
+        }
+        .profile-icon {
+            transition: all 0.2s ease;
+        }
+        .profile-icon:hover {
+            transform: scale(1.05);
+            border-color: white;
+        }
+    </style>
+</head>
+<body class="profile-bg text-white min-h-screen flex flex-col">
+    <nav class="px-12 py-4">
+        <div class="text-red-600 font-bold text-4xl">NETFLIX</div>
+    </nav>
+
+    <main class="flex-grow flex flex-col items-center justify-center px-4">
+        <h1 class="text-4xl md:text-5xl text-center mb-12">Who's watching?</h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full max-w-4xl">
+            <div class="profile-icon flex flex-col items-center group cursor-pointer">
+                <div class="w-24 h-24 md:w-32 md:h-32 bg-red-600 rounded mb-3 border-2 border-transparent group-hover:border-white"></div>
+                <span class="text-gray-400 group-hover:text-white">Profile 1</span>
+            </div>
+            <div class="profile-icon flex flex-col items-center group cursor-pointer">
+                <div class="w-24 h-24 md:w-32 md:h-32 bg-blue-600 rounded mb-3 border-2 border-transparent group-hover:border-white"></div>
+                <span class="text-gray-400 group-hover:text-white">Profile 2</span>
+            </div>
+            <div class="profile-icon flex flex-col items-center group cursor-pointer">
+                <div class="w-24 h-24 md:w-32 md:h-32 bg-green-600 rounded mb-3 border-2 border-transparent group-hover:border-white"></div>
+                <span class="text-gray-400 group-hover:text-white">Profile 3</span>
+            </div>
+            <div class="profile-icon flex flex-col items-center group cursor-pointer">
+                <div class="w-24 h-24 md:w-32 md:h-32 bg-purple-600 rounded mb-3 border-2 border-transparent group-hover:border-white"></div>
+                <span class="text-gray-400 group-hover:text-white">Profile 4</span>
+            </div>
+            <div class="profile-icon flex flex-col items-center group cursor-pointer">
+                <div class="w-24 h-24 md:w-32 md:h-32 bg-gray-600 rounded mb-3 border-2 border-transparent group-hover:border-white flex items-center justify-center">
+                    <i class="fas fa-plus text-2xl"></i>
+                </div>
+                <span class="text-gray-400 group-hover:text-white">Add Profile</span>
+            </div>
+        </div>
+        <button class="mt-16 border border-gray-600 px-8 py-2 text-gray-400 hover:text-white hover:border-white">
+            Manage Profiles
+        </button>
+    </main>
+</body>
+</html>
