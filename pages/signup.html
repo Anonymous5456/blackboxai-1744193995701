@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Sign Up</title>
+    <link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .signup-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .steps {
+            counter-reset: step;
+        }
+        .step:before {
+            counter-increment: step;
+            content: counter(step);
+            @apply w-8 h-8 flex items-center justify-center rounded-full border border-gray-400;
+        }
+        .step.active:before {
+            @apply bg-white text-black border-white;
+        }
+        .step.completed:before {
+            content: '✓';
+            @apply bg-green-500 border-green-500 text-white;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="flex justify-between items-center px-12 py-4">
+        <div class="text-red-600 font-bold text-4xl">NETFLIX</div>
+        <a href="signin.html" class="text-lg hover:underline">Sign In</a>
+    </nav>
+
+    <main class="signup-bg min-h-screen flex items-center justify-center">
+        <div class="bg-black bg-opacity-70 p-8 md:p-12 rounded w-full max-w-2xl">
+            <div class="steps flex justify-between mb-8 text-gray-400">
+                <div class="step active flex flex-col items-center">
+                    <span class="mb-2">STEP <b>1</b> OF <b>3</b></span>
+                    <span class="font-bold">Create Account</span>
+                </div>
+                <div class="step flex flex-col items-center">
+                    <span class="mb-2">STEP <b>2</b> OF <b>3</b></span>
+                    <span class="font-bold">Choose Plan</span>
+                </div>
+                <div class="step flex flex-col items-center">
+                    <span class="mb-2">STEP <b>3</b> OF <b>3</b></span>
+                    <span class="font-bold">Payment</span>
+                </div>
+            </div>
+
+            <h1 class="text-3xl font-bold mb-6">Create a password to start your membership</h1>
+            <p class="text-xl mb-8">Just a few more steps and you're done!</p>
+
+            <form class="space-y-6">
+                <input type="email" placeholder="Email" class="w-full bg-gray-700 p-4 rounded">
+                <input type="password" placeholder="Add a password" class="w-full bg-gray-700 p-4 rounded">
+                <div class="flex items-center">
+                    <input type="checkbox" id="newsletter" class="mr-2">
+                    <label for="newsletter">Please do not email me Netflix special offers.</label>
+                </div>
+                <button type="submit" class="w-full bg-red-600 py-4 rounded font-bold text-xl">Next</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
